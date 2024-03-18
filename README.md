@@ -1,4 +1,6 @@
 # Loja:
+  ## Projeto em andamento
+
   Este é um sistema de uma loja de produtos eletrônicos, totalmente desenvolvido em Python. Para utilizar, é necessário ter o Python instalado em seu computador. Se já estiver instalado, siga os passos abaixo:
 
 1. Acesse o caminho "Loja\Loja.py" 
