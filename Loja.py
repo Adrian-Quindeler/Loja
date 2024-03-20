@@ -1,6 +1,6 @@
 import sys
 from PyQt5.QtWidgets import QApplication
-from UI import * 
+from TelaInicial import * 
 
 def run_app():
     app = QApplication(sys.argv)
