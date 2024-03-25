@@ -108,10 +108,10 @@ def FinalizarCompra(CEP, carrinho, nome, email):
     if len(carrinho) == 1:
         print(f"Obrigado por comprar na Adrian's & Adrian's {nome},"
         f"\nQualquer novidade, enviaremos para o email: {email}."
-        f"\nO produto chegará no CEP {str(CEP)[:1]}.{str(CEP)[2:5]}-{str(CEP)[-3:]} em até 30 dias."
+        f"\nO produto chegará no CEP informado em até 30 dias."
         "\nAgradecemos sua visita.")
     else:
         print(f"Obrigado por comprar na Adrian's & Adrian's {nome},"
         f"\nQualquer novidade, enviaremos para o email: {email}."
-        f"\nOs produtos chegaram no CEP {str(CEP)[:1]}.{str(CEP)[2:5]}-{str(CEP)[-3:]} em até 30 dias."
+        f"\nOs produtos chegarão no CEP informado em até 30 dias."
         "\nAgradecemos sua visita.")
