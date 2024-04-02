@@ -1,10 +1,10 @@
 import sys
 from PyQt5.QtWidgets import QApplication
-from TelaInicial import MainWindow as TelaInicialMainWindow  # Importar a classe MainWindow de TelaInicial.py
+from TelaInicial import MainWindow as TelaInicialMainWindow  
 
 def run_app():
     app = QApplication(sys.argv)
-    ui = TelaInicialMainWindow()  # Criar uma instância da classe MainWindow do módulo TelaInicial
+    ui = TelaInicialMainWindow()
     sys.exit(app.exec_())
 
 
