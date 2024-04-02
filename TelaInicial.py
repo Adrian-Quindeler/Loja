@@ -11,7 +11,7 @@ class MainWindow(QMainWindow):
         self.topDistance = 500
         self.quantity = {}
         self.position = {}
-        self.price = {"pc":12345, "teclado":10, "mouse":5, "monitor":10, "mousepad":2, "processador":20, "ssd":20, "cooler" :15, "item1":20,   "item2":20}
+        self.price = {"pc":12345, "teclado":10, "mouse":5, "monitor":10, "mousepad":2, "processador":20, "ssd":20, "cooler" :15, "placaVideo":60, "fone":20}
         self.createAllItems()
         self.createButtons()
         self.loadWindow()
@@ -47,9 +47,9 @@ class MainWindow(QMainWindow):
         processador= self.funcoes.createItemToAdd(self,  10, 240, "imagens/Medias/processador_m.jpg", "HyperCore: Perfeito para Desempenho Computacional! Equipado com tecnologia de ponta, tem potência para lidar com as tarefas mais exigentes")
         ssd = self.funcoes.createItemToAdd       (self, 330, 240, "imagens/Medias/ssd_m.jpg",         "TurboDrive: o SSD de Elite completo! Com capacidades de armazenamento e velocidades de leitura/gravação ultra-rápidas e alta confiabilidade")
         cooler = self.funcoes.createItemToAdd    (self, 650, 240, "imagens/Medias/cooler_m.jpg",      "FrostBlast: o Cooler perfeito para seu Desempenho de Refrigeração! Oferece resfriamento excepcional e silencio para seu sistema.")
-        item1 = self.funcoes.createItemToAdd     (self, 970, 240, "imagens/Medias/pc_m.jpg") 
+        placaVideo = self.funcoes.createItemToAdd(self, 970, 240, "imagens/Medias/placaVideo_m.jpg") 
         mousepad = self.funcoes.createItemToAdd  (self,  10, 380, "imagens/Medias/mousepad_m.jpg",    "HyperGlide Pro: o Mousepad de Elite para sua Precisão e Conforto de Movimento!") 
-        item2 = self.funcoes.createItemToAdd     (self, 330, 380, "imagens/Medias/pc_m.jpg") 
+        fone = self.funcoes.createItemToAdd      (self, 330, 380, "imagens/Medias/fone_m.jpg") 
 
         pc.clicked.connect         (lambda: self.onAddToCartClicked('pc'))
         teclado.clicked.connect    (lambda: self.onAddToCartClicked('teclado'))
@@ -59,8 +59,8 @@ class MainWindow(QMainWindow):
         processador.clicked.connect(lambda: self.onAddToCartClicked('processador'))
         ssd.clicked.connect        (lambda: self.onAddToCartClicked('ssd'))
         cooler.clicked.connect     (lambda: self.onAddToCartClicked('cooler'))
-        item1.clicked.connect      (lambda: self.onAddToCartClicked('item1'))
-        item2.clicked.connect      (lambda: self.onAddToCartClicked('item2'))
+        placaVideo.clicked.connect (lambda: self.onAddToCartClicked('placaVideo'))
+        fone.clicked.connect       (lambda: self.onAddToCartClicked('fone'))
 
     def onHomeClicked(self):
         self.__init__()
