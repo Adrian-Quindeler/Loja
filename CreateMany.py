@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import QLabel, QPushButton
 from PyQt5 import QtGui
 import locale
 
-class CreateOne:
+class CreateMany:
 
     def __init__(self) -> None:
         self.total_price = 0
