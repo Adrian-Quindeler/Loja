@@ -1,97 +1,99 @@
-from PyQt5.QtWidgets import QLabel, QPushButton
-from PyQt5 import QtGui
-import locale
-
+from CreateOne import *
 class CreateMany:
+    def firstScreen(parent):  
+        parent.createOne.item        (parent,  10, 100, "imagens/Medias/pc_m.jpg",          "Supremacy Ultra: o ápice da tecnologia encapsulada em um computador excepcionalmente poderoso e esteticamente impressionante.")
+        parent.createOne.item   (parent, 330, 100, "imagens/Medias/teclado_m.jpg",     "ultra type: teclado mecânico com uma experiência de digitação excepcional! Combina durabilidade, precisão e conforto em um design elegante e excêntrico.")
+        parent.createOne.item   (parent, 650, 100, "imagens/Medias/monitor_m.jpg",     "VisionXtreme: Com resolução Ultra HD 4K, taxa de atualização de 144Hz e tecnologia HDR, oferece imagens nítidas e vibrantes para uma experiência visual imersiva.")
+        parent.createOne.item     (parent, 970, 100, "imagens/Medias/mouse_m.jpg",       "PhantomGrip: o Mouse Gamer de Elite Projetado para proporcionar precisão, velocidade e conforto como nenhum outro.")
+        parent.createOne.item(parent,  10, 240, "imagens/Medias/processador_m.jpg", "HyperCore: Perfeito para Desempenho Computacional! Equipado com tecnologia de ponta, tem potência para lidar com as tarefas mais exigentes")
+        parent.createOne.item       (parent, 330, 240, "imagens/Medias/ssd_m.jpg",         "TurboDrive: o SSD de Elite completo! Com capacidades de armazenamento e velocidades de leitura/gravação ultra-rápidas e alta confiabilidade")
+        parent.createOne.item    (parent, 650, 240, "imagens/Medias/cooler_m.jpg",      "FrostBlast: o Cooler perfeito para seu Desempenho de Refrigeração! Oferece resfriamento excepcional e silencio para seu sistema.")
+        parent.createOne.item(parent, 970, 240, "imagens/Medias/placaVideo_m.jpg",  "TurBoost 9000X tem uma potência de processamento gráfico projetada para elevar sua experiência a novos patamares. Com velocidade, eficiência e potência líderes de mercado") 
+        parent.createOne.item  (parent,  10, 380, "imagens/Medias/mousepad_m.jpg",    "HyperGlide Pro: o Mousepad de Elite para sua Precisão e Conforto de Movimento!") 
+        parent.createOne.item      (parent, 330, 380, "imagens/Medias/fone_m.jpg",        "SonicBlast 8000X: projetados para proporcionar áudio imersivo e de alta qualidade. Com drivers de última geração e tecnologia de cancelamento de ruído ativo.") 
+        parent.createOne.item       (parent, 650, 380, "imagens/Medias/ram_m.jpg",           "RAM Triforce: uma solução poderosa que oferece não uma, mas três memórias RAM de alta velocidade, Com capacidade total de 24GB (3x8GB)") 
+        parent.createOne.item  (parent, 970, 380, "imagens/Medias/gabinete_m.jpg",      "Gamer Turbo X, uma escolha para os entusiastas de PC que buscam o máximo em desempenho e estilo. Com iluminação RGB personalizável e amplo espaço interno") 
 
-    def __init__(self) -> None:
-        self.total_price = 0
-    
-    def label(self, parent, text, leftDistance, topDistance, width, height, style):
-        label = QLabel(parent)
-        label.setWordWrap(True)
-        label.setText(text)
-        label.move(leftDistance, topDistance)
-        label.resize(width, height)
-        label.setStyleSheet(style)
-        label.show()
 
-        return label
-
-    def image(self, parent, leftDistance, topDistance, path, width=100, height=100):
-        image = QLabel(parent)
-        image.move(leftDistance, topDistance)
-        image.resize(width, height)
-        image.setPixmap(QtGui.QPixmap(path))
-        return image
-
-    def button(self, parent, text, leftDistance, topDistance, width, height, style):
-        button = QPushButton(text, parent)
-        button.move(leftDistance, topDistance)
-        button.resize(width, height)
-        button.setStyleSheet(style)
-        button.show()
-        return button
-
-    def itemToAdd(self, parent, leftDistance, topDistance, path, description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."):
-        self.image(parent, leftDistance, topDistance, path)
-        self.label(parent, description, leftDistance + 110, topDistance, 190, 100,
-                                "QLabel {font: bold; font-size: 14px; color: black; padding: 0 0 0 0}")
-        add_to_cart = self.button(parent, "+", leftDistance + 90, topDistance + 90, 25, 25, 
-                            'QPushButton {background-color:#000540; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
-        return add_to_cart
-
-    def itemToRemove(self, product):
-        product.setText('-')
-        product.setStyleSheet('QPushButton {background-color:#D40000; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
-        product.show()
-        return product
-
-    def newItemInCart(self, parent, leftDistance, topDistance, path, quantity, price):
-        image = self.image(parent, leftDistance, topDistance, path)
-        image.show()
-
-        preco = self.formatar_moeda(price)
-        valor = self.formatar_moeda(price*quantity)
-        self.label(parent,     preco, leftDistance + 65, topDistance+20,  90, 20, "QLabel {font-size: 14px; color: black;}")
-        self.label(parent, "total: ", leftDistance + 65, topDistance+50,  30, 10, "QLabel {font-size: 12px; color: black;}")
+    def itemsToAdd(parent):
+        pc_add =          parent.createOne.button(parent, "+",  100, 190, 25, 25, 'QPushButton {background-color:#000540; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        teclado_add =     parent.createOne.button(parent, "+",  420, 190, 25, 25, 'QPushButton {background-color:#000540; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        monitor_add =     parent.createOne.button(parent, "+",  740, 190, 25, 25, 'QPushButton {background-color:#000540; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        mouse_add =       parent.createOne.button(parent, "+", 1060, 190, 25, 25, 'QPushButton {background-color:#000540; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        processador_add = parent.createOne.button(parent, "+",  100, 330, 25, 25, 'QPushButton {background-color:#000540; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        ssd_add =         parent.createOne.button(parent, "+",  420, 330, 25, 25, 'QPushButton {background-color:#000540; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        cooler_add =      parent.createOne.button(parent, "+",  740, 330, 25, 25, 'QPushButton {background-color:#000540; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        placaVideo_add =  parent.createOne.button(parent, "+", 1060, 330, 25, 25, 'QPushButton {background-color:#000540; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        mousepad_add =    parent.createOne.button(parent, "+",  100, 470, 25, 25, 'QPushButton {background-color:#000540; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        fone_add =        parent.createOne.button(parent, "+",  420, 470, 25, 25, 'QPushButton {background-color:#000540; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        ram_add =         parent.createOne.button(parent, "+",  740, 470, 25, 25, 'QPushButton {background-color:#000540; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        gabinete_add =    parent.createOne.button(parent, "+", 1060, 470, 25, 25, 'QPushButton {background-color:#000540; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
         
-        priceLabel = self.label(parent,     valor, leftDistance + 65, topDistance+60, 105, 12, "QLabel {font-size: 10px; color: black;}")
-        quantityLabel = self.label(parent, str(quantity), leftDistance + 50, topDistance + 70, 20, 20,("QLabel {font: bold; font-size: 24; border-radius: 10px; background: black; color: white;  padding: 0 0 2px 3px}"))
-        return[priceLabel, quantityLabel]
+        pc_add.clicked.connect         (lambda: parent.onAddToCartClicked('pc'))
+        teclado_add.clicked.connect    (lambda: parent.onAddToCartClicked('teclado'))
+        monitor_add.clicked.connect    (lambda: parent.onAddToCartClicked('monitor'))
+        mouse_add.clicked.connect      (lambda: parent.onAddToCartClicked('mouse'))       
+        mousepad_add.clicked.connect   (lambda: parent.onAddToCartClicked('mousepad'))
+        processador_add.clicked.connect(lambda: parent.onAddToCartClicked('processador'))
+        ssd_add.clicked.connect        (lambda: parent.onAddToCartClicked('ssd'))
+        cooler_add.clicked.connect     (lambda: parent.onAddToCartClicked('cooler'))
+        placaVideo_add.clicked.connect (lambda: parent.onAddToCartClicked('placaVideo'))
+        fone_add.clicked.connect       (lambda: parent.onAddToCartClicked('fone'))
+        ram_add.clicked.connect        (lambda: parent.onAddToCartClicked('ram'))
+        gabinete_add.clicked.connect   (lambda: parent.onAddToCartClicked('gabinete'))
 
-    def updateItemInCart(self, priceLabel, quantityLabel, price, quantity):
-        valor = self.formatar_moeda(price*quantity)
-        priceLabel.setText(str(valor))
-        if(quantity <= 9):
-            quantityLabel.setText(str(quantity))
-        else:
-            quantityLabel.resize(25, 25)
-            quantityLabel.setStyleSheet("QLabel {font: bold; font-size: 24; border-radius: 12px; background: black; color: white;  padding: 0 0 2px 3px}")
-            quantityLabel.setText(str(quantity))
-            
-    def calcularTotal(self, price, quantity):
-        self.total_price = 0
-        for key in quantity.keys():
-            for k in price.keys():
-                if(str(key) == str(k)):
-                    self.total_price += (price[k] * quantity[key])
-                    break
-    
-    def newTotal(self, parent, price, quantity):
-        self.calcularTotal(price, quantity)
-        valor = self.formatar_moeda(self.total_price)
-        self.label(parent,      " ", 1070, 580, 150,100, "QLabel {background: white}")
-        self.label(parent,"total: ", 1070, 580,  80, 20, "QLabel {font: bold; font-size: 18px; color: black;}")
-        priceLabel = self.label(parent, valor, 1070, 610, 180, 20, "QLabel {background: white; font: bold; font-size: 15px; color: black;}")
-        return priceLabel
 
-    def updateTotal(self, price, quantity, priceLabel):
-        self.calcularTotal(price, quantity)
-        valor = self.formatar_moeda(self.total_price)
-        priceLabel.setText(str(valor))
+    def itemsToRemove(parent):
+        pc_remove =          parent.createOne.button(parent, "-",  100, 190, 25, 25, 'QPushButton {background-color:#D40000; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        teclado_remove =     parent.createOne.button(parent, "-",  420, 190, 25, 25, 'QPushButton {background-color:#D40000; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        monitor_remove =     parent.createOne.button(parent, "-",  740, 190, 25, 25, 'QPushButton {background-color:#D40000; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        mouse_remove =       parent.createOne.button(parent, "-", 1060, 190, 25, 25, 'QPushButton {background-color:#D40000; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        processador_remove = parent.createOne.button(parent, "-",  100, 330, 25, 25, 'QPushButton {background-color:#D40000; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        ssd_remove =         parent.createOne.button(parent, "-",  420, 330, 25, 25, 'QPushButton {background-color:#D40000; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        cooler_remove =      parent.createOne.button(parent, "-",  740, 330, 25, 25, 'QPushButton {background-color:#D40000; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        placaVideo_remove =  parent.createOne.button(parent, "-", 1060, 330, 25, 25, 'QPushButton {background-color:#D40000; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        mousepad_remove =    parent.createOne.button(parent, "-",  100, 470, 25, 25, 'QPushButton {background-color:#D40000; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        fone_remove =        parent.createOne.button(parent, "-",  420, 470, 25, 25, 'QPushButton {background-color:#D40000; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        ram_remove =         parent.createOne.button(parent, "-",  740, 470, 25, 25, 'QPushButton {background-color:#D40000; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
+        gabinete_remove =    parent.createOne.button(parent, "-", 1060, 470, 25, 25, 'QPushButton {background-color:#D40000; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
 
-    def formatar_moeda(self, valor):
-        return locale.currency(valor, grouping=True)
+        pc_remove.clicked.connect         (lambda: parent.removeFromCart('pc'))
+        teclado_remove.clicked.connect    (lambda: parent.removeFromCart('teclado'))
+        monitor_remove.clicked.connect    (lambda: parent.removeFromCart('monitor'))
+        mouse_remove.clicked.connect      (lambda: parent.removeFromCart('mouse'))       
+        processador_remove.clicked.connect(lambda: parent.removeFromCart('processador'))
+        ssd_remove.clicked.connect        (lambda: parent.removeFromCart('ssd'))
+        cooler_remove.clicked.connect     (lambda: parent.removeFromCart('cooler'))
+        placaVideo_remove.clicked.connect (lambda: parent.removeFromCart('placaVideo'))
+        mousepad_remove.clicked.connect   (lambda: parent.removeFromCart('mousepad'))
+        fone_remove.clicked.connect       (lambda: parent.removeFromCart('fone'))
+        ram_remove.clicked.connect        (lambda: parent.removeFromCart('ram'))
+        gabinete_remove.clicked.connect   (lambda: parent.removeFromCart('gabinete'))
 
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+
+    def itemDetails(parent):
+        pc_details =          parent.createOne.button(parent, "?",  100, 190, 25, 25, 'QPushButton {background-color:#FFFFFF; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 0 2px}')
+        teclado_details =     parent.createOne.button(parent, "?",  420, 190, 25, 25, 'QPushButton {background-color:#FFFFFF; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 0 2px}')
+        monitor_details =     parent.createOne.button(parent, "?",  740, 190, 25, 25, 'QPushButton {background-color:#FFFFFF; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 0 2px}')
+        mouse_details =       parent.createOne.button(parent, "?", 1060, 190, 25, 25, 'QPushButton {background-color:#FFFFFF; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 0 2px}')
+        processador_details = parent.createOne.button(parent, "?",  100, 330, 25, 25, 'QPushButton {background-color:#FFFFFF; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 0 2px}')
+        ssd_details =         parent.createOne.button(parent, "?",  420, 330, 25, 25, 'QPushButton {background-color:#FFFFFF; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 0 2px}')
+        cooler_details =      parent.createOne.button(parent, "?",  740, 330, 25, 25, 'QPushButton {background-color:#FFFFFF; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 0 2px}')
+        placaVideo_details =  parent.createOne.button(parent, "?", 1060, 330, 25, 25, 'QPushButton {background-color:#FFFFFF; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 0 2px}')
+        mousepad_details =    parent.createOne.button(parent, "?",  100, 470, 25, 25, 'QPushButton {background-color:#FFFFFF; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 0 2px}')
+        fone_details =        parent.createOne.button(parent, "?",  420, 470, 25, 25, 'QPushButton {background-color:#FFFFFF; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 0 2px}')
+        ram_details =         parent.createOne.button(parent, "?",  740, 470, 25, 25, 'QPushButton {background-color:#FFFFFF; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 0 2px}')
+        gabinete_details =    parent.createOne.button(parent, "?", 1060, 470, 25, 25, 'QPushButton {background-color:#FFFFFF; color: black; font:bold; font-size:24px; border-radius:12px; padding: 0 0 0 2px}')
+
+        pc_details.clicked.connect         (lambda: parent.productDetails('pc', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.'))
+        teclado_details.clicked.connect    (lambda: parent.productDetails('teclado', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.'))
+        monitor_details.clicked.connect    (lambda: parent.productDetails('monitor', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.'))
+        mouse_details.clicked.connect      (lambda: parent.productDetails('mouse', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.'))       
+        processador_details.clicked.connect(lambda: parent.productDetails('processador', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.'))
+        ssd_details.clicked.connect        (lambda: parent.productDetails('ssd', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.'))
+        cooler_details.clicked.connect     (lambda: parent.productDetails('cooler', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.'))
+        placaVideo_details.clicked.connect (lambda: parent.productDetails('placaVideo', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.'))
+        mousepad_details.clicked.connect   (lambda: parent.productDetails('mousepad', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.'))
+        fone_details.clicked.connect       (lambda: parent.productDetails('fone', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.'))
+        ram_details.clicked.connect        (lambda: parent.productDetails('ram', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.'))
+        gabinete_details.clicked.connect   (lambda: parent.productDetails('gabinete', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.'))

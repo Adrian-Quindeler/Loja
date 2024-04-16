@@ -15,7 +15,6 @@ class CreateOne:
         label.resize(width, height)
         label.setStyleSheet(style)
         label.show()
-
         return label
 
     def image(self, parent, leftDistance, topDistance, path, width=100, height=100):
@@ -23,6 +22,7 @@ class CreateOne:
         image.move(leftDistance, topDistance)
         image.resize(width, height)
         image.setPixmap(QtGui.QPixmap(path))
+        image.show()
         return image
 
     def button(self, parent, text, leftDistance, topDistance, width, height, style):
@@ -33,19 +33,10 @@ class CreateOne:
         button.show()
         return button
 
-    def itemToAdd(self, parent, leftDistance, topDistance, path, description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."):
+    def item(self, parent, leftDistance, topDistance, path, description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."):
         self.image(parent, leftDistance, topDistance, path)
         self.label(parent, description, leftDistance + 110, topDistance, 190, 100,
                                 "QLabel {font: bold; font-size: 14px; color: black; padding: 0 0 0 0}")
-        add_to_cart = self.button(parent, "+", leftDistance + 90, topDistance + 90, 25, 25, 
-                            'QPushButton {background-color:#000540; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
-        return add_to_cart
-
-    def itemToRemove(self, product):
-        product.setText('-')
-        product.setStyleSheet('QPushButton {background-color:#D40000; color: white; font:bold; font-size:24px; border-radius:12px; padding: 0 0 5px 0}')
-        product.show()
-        return product
 
     def newItemInCart(self, parent, leftDistance, topDistance, path, quantity, price):
         image = self.image(parent, leftDistance, topDistance, path)
@@ -91,6 +82,12 @@ class CreateOne:
         valor = self.formatar_moeda(self.total_price)
         priceLabel.setText(str(valor))
 
+    def detailsScreem(self, parent, product, description):
+        path = (f"imagens/Grandes/{product}_g.jpg")
+        imagem = self.image(parent, 50, 50, path, 300, 300)
+        imagem.show()
+        self.label(parent, description, 360, 40, 940, 80, "QLabel {font: bold; font-size: 18px; color: black;}")
+    
     def formatar_moeda(self, valor):
         return locale.currency(valor, grouping=True)
 
