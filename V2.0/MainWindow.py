@@ -28,16 +28,15 @@ class MainWindow(QMainWindow):
 
     def createHeader(self):
         self.createOne.label(self, "Eletronic Paradise", 950, 10, 320, 50, 'QLabel {background-color:#000540; border-radius: 16px; font:bold; font-size:30px; color: white; padding: 0 0 0 15px}')
-        self.createOne.label(self, "Seja bem vindo!",     10,  5, 400, 80, "QLabel {font: bold; font-size: 45px; color: black;  padding: 10px}")
+        self.createOne.label(self, "Seja bem vindo!",     0,  0, 400, 60, "QLabel {font: bold; font-size: 45px; color: black;  padding: 10px}")
 
-        addToCart = self.createOne.button         (self, "Adicionar ao carrinho", 415, 22, 170, 30, 'QPushButton {background-color:#000540; border-radius: 15; font:bold; font-size:14; color: white}')
+        addToCart = self.createOne.button         (self, "Adicionar ao carrinho", 415, 22, 170, 30, 'QPushButton {background-color:#000540; border-radius: 15; font:bold; font-size:14px; color: white}')
         viewProductDetails = self.createOne.button(self, "Ver as especificações", 600, 22, 160, 30, 'QPushButton {background-color:#000540; border-radius: 15; font:bold; font-size:14px; color: white}')
-        removeFromCart = self.createOne.button    (self, "Remover do carrinho",   780, 22, 160, 30, 'QPushButton {background-color:#000540; border-radius: 15; font:bold; font-size:14; color: white}')
+        removeFromCart = self.createOne.button    (self, "Remover do carrinho",   780, 22, 160, 30, 'QPushButton {background-color:#000540; border-radius: 15; font:bold; font-size:14px; color: white}')
     
         viewProductDetails.clicked.connect(lambda: CreateMany.itemDetails(self))
         removeFromCart.clicked.connect(lambda: CreateMany.itemsToRemove(self))
         addToCart.clicked.connect(lambda: CreateMany.itemsToAdd(self))
-        
 
     def onAddToCartClicked(self, product):
         self.all.append(product)
@@ -59,6 +58,7 @@ class MainWindow(QMainWindow):
         if(self.leftDistance > 800):
             self.leftDistance = -140
             self.topDistance = 590
+            
         if(self.isInDict(product, self.position)):
             self.createOne.updateItemInCart(self.labels[product][0], self.labels[product][1], self.price[product], self.quantity[product])
         else:
@@ -93,16 +93,18 @@ class MainWindow(QMainWindow):
     
     def restoreScreen(self):
         self.clearScreen()
+        self.clearCartDisplay()
         self.createHeader()
         CreateMany.firstScreen(self)
         CreateMany.itemsToAdd(self)
+        for item in self.all:
+            self.AddToCart(item)
 
-
-    def productDetails(self, product, description):
+    def productDetails(self, product, description1, description2):
         self.clearScreen()
+        self.createOne.detailsScreem(self, product, description1, description2)
         button = self.createOne.button(self, "Voltar", 1100, 650, 120, 40, 'QPushButton {background-color:#000540; border-radius: 20px; font:bold; font-size:24px; color: white}')
         button.clicked.connect(self.restoreScreen)
-        self.createOne.detailsScreem(self, product, description)
 
     def onFinalizePurchaseClicked(self, produto):
         print("A")

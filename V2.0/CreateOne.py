@@ -82,12 +82,13 @@ class CreateOne:
         valor = self.formatar_moeda(self.total_price)
         priceLabel.setText(str(valor))
 
-    def detailsScreem(self, parent, product, description):
+    def detailsScreem(self, parent, product, description1, description2):
         path = (f"imagens/Grandes/{product}_g.jpg")
-        imagem = self.image(parent, 50, 50, path, 300, 300)
+        imagem = self.image(parent, 20, 20, path, 300, 300)
         imagem.show()
-        self.label(parent, description, 360, 40, 940, 80, "QLabel {font: bold; font-size: 18px; color: black;}")
-    
+        self.label(parent, description1, 350, 0, 890, 340, "QLabel {font: bold; font-size: 18px; color: black;}")
+        self.label(parent, description2, 10, 340, 1230, 340, "QLabel {font: bold; font-size: 18px; color: black;}")
+
     def formatar_moeda(self, valor):
         return locale.currency(valor, grouping=True)
 
