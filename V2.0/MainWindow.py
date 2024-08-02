@@ -23,7 +23,7 @@ class MainWindow(QMainWindow):
     def loadWindow(self):
         self.setGeometry(0, 0, 1280, 720)
         self.setWindowTitle("Adrian's & Adrian's LTDA.")
-        self.setStyleSheet("QMainWindow {background: qlineargradient(x1:1, y1:1, x2:0, y2:0, stop: 0 #000540, stop: 1 #1bdeb4); }")
+        self.setStyleSheet("QMainWindow {background: qlineargradient(x1:1, y1:1, x2:0, y2:0, stop: 0 #493AE0, stop: 1 #51CFE0); }")
         self.show()
 
     def createHeader(self):
