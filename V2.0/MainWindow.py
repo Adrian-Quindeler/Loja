@@ -23,7 +23,7 @@ class MainWindow(QMainWindow):
     def loadWindow(self):
         self.setGeometry(0, 0, 1280, 720)
         self.setWindowTitle("Adrian's & Adrian's LTDA.")
-        self.setStyleSheet("QMainWindow {background: qlineargradient(x1:1, y1:1, x2:0, y2:0, stop: 0 #493AE0, stop: 1 #51CFE0); }")
+        self.setStyleSheet("QMainWindow {background: qlineargradient(x1:1, y1:1, x2:0, y2:0, stop: 0 #617DED, stop: 1 #61EDD7); }")
         self.show()
 
     def createHeader(self):
@@ -41,6 +41,12 @@ class MainWindow(QMainWindow):
     def onAddToCartClicked(self, product):
         self.all.append(product)
         self.AddToCart(product)
+
+    def isInDict(self, produto, dict):
+        for key in dict.keys():
+            if(produto == key):
+               return True
+        return False
 
     def AddToCart(self, product):
         if len(self.quantity) == 0:
@@ -90,7 +96,13 @@ class MainWindow(QMainWindow):
     def clearScreen(self):
         for widget in self.findChildren(QWidget):
             widget.deleteLater()
-    
+
+    def productDetails(self, product, description1, description2):
+        self.clearScreen()
+        self.createOne.detailsScreem(self, product, description1, description2)
+        button = self.createOne.button(self, "Voltar", 1100, 650, 120, 40, 'QPushButton {background-color:#000540; border-radius: 20px; font:bold; font-size:24px; color: white}')
+        button.clicked.connect(self.restoreScreen)
+
     def restoreScreen(self):
         self.clearScreen()
         self.clearCartDisplay()
@@ -100,17 +112,5 @@ class MainWindow(QMainWindow):
         for item in self.all:
             self.AddToCart(item)
 
-    def productDetails(self, product, description1, description2):
-        self.clearScreen()
-        self.createOne.detailsScreem(self, product, description1, description2)
-        button = self.createOne.button(self, "Voltar", 1100, 650, 120, 40, 'QPushButton {background-color:#000540; border-radius: 20px; font:bold; font-size:24px; color: white}')
-        button.clicked.connect(self.restoreScreen)
-
     def onFinalizePurchaseClicked(self, produto):
         print("A")
-    
-    def isInDict(self, produto, dict):
-        for key in dict.keys():
-            if(produto == key):
-               return True
-        return False
