@@ -91,5 +91,3 @@ class CreateOne:
 
     def formatar_moeda(self, valor):
         return locale.currency(valor, grouping=True)
-
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')

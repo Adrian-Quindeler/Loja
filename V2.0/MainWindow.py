@@ -1,38 +1,43 @@
 from CreateOne import *
 from CreateMany import *
+from Constants import *
 from PyQt5.QtWidgets import QMainWindow, QWidget
+from PyQt5.QtCore import QTimer
 
 class MainWindow(QMainWindow):
 
     def __init__(self):
         super().__init__()
-        self.createMany = CreateMany()
-        self.createOne = CreateOne()
-        self.leftDistance = -140
-        self.topDistance = 500
-        self.all = []
-        self.labels= {}
-        self.quantity = {}
-        self.position = {}
-        self.price = {"pc":6500.69, "teclado":180.50, "mouse":65.5, "monitor":680.10, "mousepad":59.99, "processador":4000.75, "ssd":450.20, "cooler" :30.15, "placaVideo":1900.30, "fone":60.96, "ram":50.00, "gabinete":50.50}
+        self.initializeAttributes()
         self.createHeader()
         CreateMany.firstScreen(self)
         CreateMany.itemsToAdd(self)
         self.loadWindow()
 
+    def initializeAttributes(self):
+        self.createMany = CreateMany()
+        self.createOne = CreateOne()
+        self.leftDistance = -140
+        self.topDistance = 500
+        self.all = []
+        self.labels = {}
+        self.quantity = {}
+        self.position = {}
+        self.price = PRECOS_PRODUTOS
+
     def loadWindow(self):
-        self.setGeometry(0, 0, 1280, 720)
+        self.setGeometry(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT)
         self.setWindowTitle("Adrian's & Adrian's LTDA.")
         self.setStyleSheet("QMainWindow {background: qlineargradient(x1:1, y1:1, x2:0, y2:0, stop: 0 #617DED, stop: 1 #61EDD7); }")
         self.show()
 
     def createHeader(self):
-        self.createOne.label(self, "Eletronic Paradise", 950, 10, 320, 50, 'QLabel {background-color:#000540; border-radius: 16px; font:bold; font-size:30px; color: white; padding: 0 0 0 15px}')
-        self.createOne.label(self, "Seja bem vindo!",     0,  0, 400, 60, "QLabel {font: bold; font-size: 45px; color: black;  padding: 10px}")
+        self.createOne.label(self, "Electronic Paradise", 950, 10, 320, 50, 'QLabel {background-color:#000540; border-radius: 16px; font:bold; font-size:30px; color: white; padding: 0 0 0 15px}')
+        self.createOne.label(self, "Seja bem vindo!", 0, 0, 400, 80, "QLabel {font: bold; font-size: 45px; color: black;  padding: 10px}")
 
-        addToCart = self.createOne.button         (self, "Adicionar ao carrinho", 415, 22, 170, 30, 'QPushButton {background-color:#000540; border-radius: 15; font:bold; font-size:14px; color: white}')
-        viewProductDetails = self.createOne.button(self, "Ver as especificações", 600, 22, 160, 30, 'QPushButton {background-color:#000540; border-radius: 15; font:bold; font-size:14px; color: white}')
-        removeFromCart = self.createOne.button    (self, "Remover do carrinho",   780, 22, 160, 30, 'QPushButton {background-color:#000540; border-radius: 15; font:bold; font-size:14px; color: white}')
+        addToCart = self.createOne.button(self, "Adicionar ao carrinho", 415, 22, 170, 30, BUTTON_STYLE)
+        viewProductDetails = self.createOne.button(self, "Ver as especificações", 600, 22, 160, 30, BUTTON_STYLE)
+        removeFromCart = self.createOne.button(self, "Remover do carrinho", 780, 22, 160, 30, BUTTON_STYLE)
     
         viewProductDetails.clicked.connect(lambda: CreateMany.itemDetails(self))
         removeFromCart.clicked.connect(lambda: CreateMany.itemsToRemove(self))
@@ -52,7 +57,7 @@ class MainWindow(QMainWindow):
         if len(self.quantity) == 0:
             self.createOne.label(self, " ", 10, 505, 1260, 200, "QLabel {font: bold; font-size: 45px; background: white; border-radius: 25px; padding: 10px}")
             self.labels["total"] = self.createOne.newTotal(self, self.price, self.quantity)
-        finalizePurchase = self.createOne.button(self, "Finalizar Compra", 1065, 510, 200, 45, 'QPushButton {background-color:#000540; border-radius: 20px; font:bold; font-size:22px; color: white}')
+        finalizePurchase = self.createOne.button(self, "Finalizar Compra", 1065, 520, 160, 30, BUTTON_STYLE)
         finalizePurchase.show()
 
         if(self.isInDict(product, self.quantity)):
@@ -100,7 +105,7 @@ class MainWindow(QMainWindow):
     def productDetails(self, product, description1, description2):
         self.clearScreen()
         self.createOne.detailsScreem(self, product, description1, description2)
-        button = self.createOne.button(self, "Voltar", 1100, 650, 120, 40, 'QPushButton {background-color:#000540; border-radius: 20px; font:bold; font-size:24px; color: white}')
+        button = self.createOne.button(self, "Voltar", 1100, 650, 120, 30, BUTTON_STYLE)
         button.clicked.connect(self.restoreScreen)
 
     def restoreScreen(self):
@@ -112,5 +117,7 @@ class MainWindow(QMainWindow):
         for item in self.all:
             self.AddToCart(item)
 
-    def onFinalizePurchaseClicked(self, produto):
-        print("A")
+    def onFinalizePurchaseClicked(self):
+        self.clearScreen()
+        self.createOne.label(self, "Obrigado por comprar na Electronic paradise, em parceria com Adrian's & Adrian's. Volte Sempre!", 200, 300, 850, 100, "QLabel {font: bold; font-size: 35px; color: black; background: white; border-radius: 25px; padding: 10px}")
+        QTimer.singleShot(7000, self.close)
