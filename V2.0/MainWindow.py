@@ -32,12 +32,12 @@ class MainWindow(QMainWindow):
         self.show()
 
     def createHeader(self):
-        self.createOne.label(self, "Electronic Paradise", 950, 10, 320, 50, 'QLabel {background-color:#000540; border-radius: 16px; font:bold; font-size:30px; color: white; padding: 0 0 0 15px}')
-        self.createOne.label(self, "Seja bem vindo!", 0, 0, 400, 80, "QLabel {font: bold; font-size: 45px; color: black;  padding: 10px}")
+        self.createOne.label(self, "Electronic Paradise", 870, 0, 500, 80, "QLabel {font: bold; font-size: 38px; color: black;  padding: 10px}")
+        self.createOne.label(self, "Seja bem-vindo!", 0, 0, 405, 80, "QLabel {font: bold; font-size: 38px; color: black;  padding: 10px}")
 
-        addToCart = self.createOne.button(self, "Adicionar ao carrinho", 415, 22, 170, 30, BUTTON_STYLE)
-        viewProductDetails = self.createOne.button(self, "Ver as especificações", 600, 22, 160, 30, BUTTON_STYLE)
-        removeFromCart = self.createOne.button(self, "Remover do carrinho", 780, 22, 160, 30, BUTTON_STYLE)
+        addToCart = self.createOne.button(self, "Adicionar ao carrinho", 360, 22, 170, 30, BUTTON_STYLE)
+        viewProductDetails = self.createOne.button(self, "Ver as especificações", 540, 22, 160, 30, BUTTON_STYLE)
+        removeFromCart = self.createOne.button(self, "Remover do carrinho", 710, 22, 160, 30, BUTTON_STYLE)
     
         viewProductDetails.clicked.connect(lambda: CreateMany.itemDetails(self))
         removeFromCart.clicked.connect(lambda: CreateMany.itemsToRemove(self))

@@ -6,6 +6,11 @@ class CreateOne:
 
     def __init__(self) -> None:
         self.total_price = 0
+
+        try:
+            locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+        except locale.Error:
+            print("Locale setting failed. Ensure the locale is installed on your system.")
     
     def label(self, parent, text, leftDistance, topDistance, width, height, style):
         label = QLabel(parent)

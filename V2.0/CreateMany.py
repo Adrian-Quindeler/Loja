@@ -4,16 +4,16 @@ from Constants import STYLES
 class CreateMany:
     def firstScreen(parent):  
         parent.createOne.item (parent,  10, 100, "imagens/Medias/pc_m.jpg",          "Supremacy Ultra: o ápice da tecnologia encapsulada em um computador excepcionalmente poderoso e esteticamente impressionante.")
-        parent.createOne.item (parent, 330, 100, "imagens/Medias/teclado_m.jpg",     "ultra type: teclado mecânico com uma experiência de digitação excepcional! Combina durabilidade, precisão, conforto e um design elegante.")
+        parent.createOne.item (parent, 330, 100, "imagens/Medias/teclado_m.jpg",     "UltraType: teclado mecânico com uma experiência de digitação excepcional! Com switch azul e led personalizavel")
         parent.createOne.item (parent, 650, 100, "imagens/Medias/monitor_m.jpg",     "VisionXtreme: Com resolução Ultra HD 4K, taxa de atualização de 144Hz e tecnologia HDR, oferece imagens nítidas para uma experiência visual imersiva.")
-        parent.createOne.item (parent, 970, 100, "imagens/Medias/mouse_m.jpg",       "PhantomGrip: o Mouse Gamer de Elite Projetado para proporcionar precisão, velocidade e conforto como nenhum outro.")
-        parent.createOne.item (parent,  10, 240, "imagens/Medias/processador_m.jpg", "HyperCore: Perfeito para Desempenho Computacional! Equipado com tecnologia de ponta, tem potência para lidar com as tarefas mais exigentes")
-        parent.createOne.item (parent, 330, 240, "imagens/Medias/ssd_m.jpg",         "TurboDrive: o SSD de Elite completo! Com capacidades de armazenamento e velocidades de leitura/gravação ultra-rápidas")
-        parent.createOne.item (parent, 650, 240, "imagens/Medias/cooler_m.jpg",      "FrostBlast: o Cooler perfeito para seu Desempenho de Refrigeração! Oferece resfriamento excepcional e silencio para seu sistema.")
-        parent.createOne.item (parent, 970, 240, "imagens/Medias/placaVideo_m.jpg",  "TurBoost 9000X tem uma potência de processamento gráfico projetada para elevar sua experiência a novos patamares") 
+        parent.createOne.item (parent, 970, 100, "imagens/Medias/mouse_m.jpg",       "PhantomGrip: o Mouse Gamer de Elite Projetado para proporcionar precisão e velocidade de 10.000 dpi.")
+        parent.createOne.item (parent,  10, 240, "imagens/Medias/processador_m.jpg", "HyperCore: Perfeito para Desempenho Computacional! 24 cores e 32 threads que lidam com as tarefas mais exigentes")
+        parent.createOne.item (parent, 330, 240, "imagens/Medias/ssd_m.jpg",         "TurboDrive: SSD NVMe completo! Com capacidade de armazenamento de 1Tb e velocidade de leitura/gravação de 7Gb/s")
+        parent.createOne.item (parent, 650, 240, "imagens/Medias/cooler_m.jpg",      "FrostBlast: o Water Cooler perfeito para a refrigeração! Oferece resfriamento excepcional e silencio para seu sistema.")
+        parent.createOne.item (parent, 970, 240, "imagens/Medias/placaVideo_m.jpg",  "TurBoost 9000X: com 12Gb GDDR6, Conduz o processamento gráfico para uma experiência mais elevada") 
         parent.createOne.item (parent,  10, 380, "imagens/Medias/mousepad_m.jpg",    "HyperGlide Pro: o Mousepad de Elite para sua Precisão e Conforto de Movimento!") 
-        parent.createOne.item (parent, 330, 380, "imagens/Medias/fone_m.jpg",        "SonicBlast 8000X: projetados para proporcionar áudio imersivo e de alta qualidade com tecnologia de cancelamento de ruído ativo.") 
-        parent.createOne.item (parent, 650, 380, "imagens/Medias/ram_m.jpg",         "RAM Triforce: uma solução poderosa que oferece não uma, mas três memórias RAM de alta velocidade, Com capacidade total de 24GB (3x8GB)") 
+        parent.createOne.item (parent, 330, 380, "imagens/Medias/fone_m.jpg",        "SonicBlast 8000X: projetados para proporcionar áudio imersivo com tecnologia de cancelamento de ruído ativo e som surround.") 
+        parent.createOne.item (parent, 650, 380, "imagens/Medias/ram_m.jpg",         "RAM Triforce: uma solução poderosa que oferece não uma, mas três memórias RAM DDR5 e 4800 MHz, com capacidade total de 24GB (3x8GB)") 
         parent.createOne.item (parent, 970, 380, "imagens/Medias/gabinete_m.jpg",    "Gamer Turbo X, uma escolha para os entusiastas de PC que buscam o máximo de estilo. Garante iluminação RGB personalizável e amplo espaço interno") 
 
 
