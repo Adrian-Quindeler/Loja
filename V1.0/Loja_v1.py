@@ -28,9 +28,9 @@ Especificações = ["Pacote especial: Cooler + Processador AMD Ryzen 7 5700G 3.8
     "SSD Kingston NV2 1TB NVMe M.2 2280"]
 
 #Mostrando o nome da empresa
-print("\033[1;30;44m===================================\033[m")
-print("\033[1;30;44m     Adrian's & Adrian's LTDA.     \033[m")
-print("\033[1;30;44m===================================\033[m")
+print("===================================")
+print("     Adrian's & Adrian's LTDA.    ")
+print("===================================")
 
 carrinho = []
 
@@ -71,7 +71,7 @@ while True:
     
     elif caminho == 5:
         if len(carrinho) == 0:
-            print("\n\034[1;33;44m Nenhum item foi selecionado. \034[m")
+            print("\nNenhum item foi selecionado.")
             break
         else:
             while True:
@@ -98,4 +98,4 @@ while True:
         break
     else:
         print("Resposta inválida!")
-print("\033[1;30;44m Volte Sempre! \033[m")
+print(" Volte Sempre!")

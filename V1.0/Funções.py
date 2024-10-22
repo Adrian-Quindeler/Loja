@@ -1,20 +1,20 @@
 def MostrarProdutos(listaDeProdutos):
-    print("\n\033[1;33;44m PRODUTOS: \033[m")
+    print("\nPRODUTOS:")
     for i in range(len(listaDeProdutos)):
         if listaDeProdutos[i][0] < 10:
-            print(f"\033[1;33;44m    {listaDeProdutos[i][0]}  {listaDeProdutos[i][1]:.<29}", end = "")
+            print(f"   {listaDeProdutos[i][0]}  {listaDeProdutos[i][1]:.<29}", end = "")
         else:
-            print(f"\033[1;33;44m    {listaDeProdutos[i][0]} {listaDeProdutos[i][1]:.<29}", end = "")
+            print(f"   {listaDeProdutos[i][0]} {listaDeProdutos[i][1]:.<29}", end = "")
         if listaDeProdutos[i][2] < 100:
-            print(f"..{listaDeProdutos[i][2]:.2f} \033[m")
+            print(f"..{listaDeProdutos[i][2]:.2f}")
         elif listaDeProdutos[i][2] < 1000:
-            print(f".{listaDeProdutos[i][2]:.2f} \033[m")
+            print(f".{listaDeProdutos[i][2]:.2f}")
         else:
-            print(f"{listaDeProdutos[i][2]:.2f} \033[m")
+            print(f"{listaDeProdutos[i][2]:.2f}")
 
 def MostrarEspecificações(Especificações, listaDeProdutos):
-    print("\n\033[1;33;44m Digite o número do produto para ver as especificações. \033[m"
-          "\n\033[1;33;44m Digite 0 para terminar. \033[m\n")
+    print("\nDigite o número do produto para ver as especificações."
+          "\nDigite 0 para terminar.\n")
     while True:
         try:
             desejo = int(input("\nnúmero produto: "))
@@ -25,8 +25,8 @@ def MostrarEspecificações(Especificações, listaDeProdutos):
             else:
                 for i in range(len(listaDeProdutos)):
                     if desejo == listaDeProdutos[i][0]:
-                        print(f"\n\033[1;33;44m Especificação de {listaDeProdutos[i][1]}: \033[m")
-                        print(f"\033[1;33;44m     {Especificações[i]} \033[m")
+                        print(f"\nEspecificação de {listaDeProdutos[i][1]}:")
+                        print(f"    {Especificações[i]}")
                         break
                 else:
                     print("Produto não encontrado.\n")
@@ -35,8 +35,8 @@ def MostrarEspecificações(Especificações, listaDeProdutos):
 
 def AdicionarItem(carrinho, listaDeProdutos):
     MostrarProdutos(listaDeProdutos)
-    print("\n\033[1;33;44m Digite o número do produto que deseja adicionar. \033[m"
-          "\n\033[1;33;44m Digite 0 para terminar. \033[m\n")
+    print("\nDigite o número do produto que deseja adicionar."
+          "\nDigite 0 para terminar.\n")
     while True:
         try:
             desejo = int(input("Qual produto deseja? "))
@@ -58,10 +58,10 @@ def AdicionarItem(carrinho, listaDeProdutos):
 def RemoverItem(carrinho):
     MostrandoCompra(carrinho)
     if len(carrinho) == 0:
-        print("\n\033[1;33;44m O carrinho está vazio. \033[m")
+        print("\nO carrinho está vazio.")
     else:    
-        print("\n\033[1;33;44m Digite o número do produto que deseja remover. \033[m"
-            "\n\033[1;33;44m Digite 0 para terminar. \033[m\n")
+        print("\nDigite o número do produto que deseja remover."
+            "\nDigite 0 para terminar.\n")
         while True:
             try:
                 desejo = int(input("Qual produto deseja remover? "))
@@ -83,26 +83,26 @@ def RemoverItem(carrinho):
 def MostrandoCompra(carrinho):
     total = 0
     carrinho.sort()
-    print(f"\033[1;33;44m Seu carrinho: \033[m")
+    print(f"Seu carrinho:")
     for i in range(len(carrinho)):
         total += carrinho[i][2]
         if carrinho[i][0] < 10:
-            print(f"\033[1;33;44m    {carrinho[i][0]}  {carrinho[i][1]:.<29}", end = "")
+            print(f"   {carrinho[i][0]}  {carrinho[i][1]:.<29}", end = "")
         else:
-            print(f"\033[1;33;44m    {carrinho[i][0]} {carrinho[i][1]:.<29}", end = "")
+            print(f"   {carrinho[i][0]} {carrinho[i][1]:.<29}", end = "")
         if carrinho[i][2] < 100:
-            print(f"..{carrinho[i][2]:.2f} \033[m")
+            print(f"..{carrinho[i][2]:.2f}")
         elif carrinho[i][2] < 1000:
-            print(f".{carrinho[i][2]:.2f} \033[m")
+            print(f".{carrinho[i][2]:.2f}")
         else:
-            print(f"{carrinho[i][2]:.2f} \033[m")
-    print(f"\033[1;33;44m    {'O valor total é:':.<32}", end = "")
+            print(f"{carrinho[i][2]:.2f}")
+    print(f"   {'O valor total é:':.<32}", end = "")
     if total < 100:
-        print(f"..{total:.2f} \033[m")
+        print(f"..{total:.2f}")
     elif total < 1000:
-        print(f".{total:.2f} \033[m")
+        print(f".{total:.2f}")
     else:
-        print(f"{total:.2f} \033[m")
+        print(f"{total:.2f}")
 
 def FinalizarCompra(CEP, carrinho, nome, email):
     if len(carrinho) == 1:
