@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+header {
+    background-color: #1b1b1b;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0a74da;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+nav .nav-links li {
+    margin-left: 20px;
+}
+
+nav .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav .nav-links a:hover {
+    color: #0a74da;
+}
+
+.destaque {
+    background-color: #2d2d2d;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.destaque-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.destaque-produto {
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.destaque-produto img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.destaque-produto h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.destaque-produto p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.destaque-produto button {
+    background-color: #0a74da;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.destaque-produto button:hover {
+    background-color: #005bb5;
+}
+
+.produtos {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #1f1f1f;
+}
+
+.produtos h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.produtos-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.produto {
+    background-color: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.produto h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.produto p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.produto button {
+    background-color: #0a74da;
+    border: none;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.produto button:hover {
+    background-color: #005bb5;
+}
+
+footer {
+    background-color: #1b1b1b;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

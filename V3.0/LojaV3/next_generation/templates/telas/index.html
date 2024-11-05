@@ -1,0 +1,64 @@
+{% extends 'bases/base.html'%}
+{% block title %}Next Generation{% endblock %}
+
+{% block content %}
+<main>
+    <header>
+        <nav>
+            <div class="logo">Next Generation</div>
+            <ul class="nav-links">
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Novidades</a></li>
+                <li><a href="#">Minha Conta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="destaque">
+        <div class="destaque-container">
+            <h1>Novos Lançamentos</h1>
+            <div class="destaque-produto">
+                <img src="https://via.placeholder.com/300" alt="Produto 1">
+                <h3>Smartphone X200</h3>
+                <p>R$ 2.499,00</p>
+                <button>Comprar Agora</button>
+            </div>
+            <div class="destaque-produto">
+                <img src="https://via.placeholder.com/300" alt="Produto 2">
+                <h3>Fone de Ouvido Gamer G300</h3>
+                <p>R$ 899,00</p>
+                <button>Comprar Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="produtos">
+        <h2>Produtos em Destaque</h2>
+        <div class="produtos-container">
+            <div class="produto">
+                <img src="https://via.placeholder.com/200" alt="Produto 3">
+                <h3>Notebook Gamer Z500</h3>
+                <p>R$ 4.999,00</p>
+                <button>Comprar Agora</button>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/200" alt="Produto 4">
+                <h3>Smartwatch A5</h3>
+                <p>R$ 899,00</p>
+                <button>Comprar Agora</button>
+            </div>
+            <div class="produto">
+                <img src="https://via.placeholder.com/200" alt="Produto 5">
+                <h3>Câmera Digital X1</h3>
+                <p>R$ 1.599,00</p>
+                <button>Comprar Agora</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Next Generation - Todos os direitos reservados.</p>
+    </footer>
+</main>
+{% endblock %}
