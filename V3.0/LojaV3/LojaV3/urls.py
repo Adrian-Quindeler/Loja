@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.urls import path
-
 from next_generation import views
 
 urlpatterns = [

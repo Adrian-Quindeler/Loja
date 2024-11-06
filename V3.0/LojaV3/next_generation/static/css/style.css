@@ -1,3 +1,12 @@
+:root{
+    --azulBase: #0084ff;
+    --azulBotao: #0d1f30;
+    --escuro0: #000;
+    --escuro1: #232323;
+    --escuro2: #454545;
+    --escuro3: #262836;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,34 +14,39 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
     color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+.gradient{
+    background-image:linear-gradient(var(--escuro3), var(--azulBotao));
 }
 
 header {
-    background-color: #1b1b1b;
     padding: 10px 0;
+    position: sticky;
+    top: -1px;
+    background-color: var(--escuro0);
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #0a74da;
+    color: var(--azulBase);
 }
 
 nav .nav-links {
-    list-style: none;
     display: flex;
+    list-style: none;
 }
 
 nav .nav-links li {
@@ -40,70 +54,64 @@ nav .nav-links li {
 }
 
 nav .nav-links a {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 600;
     text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    transition: color 0.3s;
 }
 
 nav .nav-links a:hover {
-    color: #0a74da;
+    transition: 0.5s;
+    color: var(--azulBase);
 }
 
 .destaque {
-    background-color: #2d2d2d;
+    padding: 40px 20px;
+    text-align: center;
+    background-image:linear-gradient(var(--azulBase), var(--escuro3));
+}
+
+.destaque h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.destaque-container {
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.produtos {
     padding: 60px 20px;
     text-align: center;
 }
 
-.destaque-container {
-    display: flex;
-    justify-content: center;
+.produtos a, .destaque a{
+    padding: 0;
+    width: 250px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.produtos-container {
     gap: 40px;
+    display: flex;
+    overflow-x: auto;
+    justify-content: center;
 }
 
-.destaque-produto {
-    background-color: #3a3a3a;
-    padding: 20px;
-    border-radius: 10px;
+.produtos-produto {
     width: 300px;
+    padding: 20px;
     text-align: center;
+    border-radius: 10px;
 }
 
-.destaque-produto img {
+.produtos-produto img {
     width: 100%;
     border-radius: 8px;
-}
-
-.destaque-produto h3 {
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-.destaque-produto p {
-    font-size: 16px;
-    margin: 10px 0;
-}
-
-.destaque-produto button {
-    background-color: #0a74da;
-    border: none;
-    color: white;
-    padding: 10px;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.destaque-produto button:hover {
-    background-color: #005bb5;
-}
-
-.produtos {
-    padding: 40px 20px;
-    text-align: center;
-    background-color: #1f1f1f;
 }
 
 .produtos h2 {
@@ -111,20 +119,47 @@ nav .nav-links a:hover {
     margin-bottom: 30px;
 }
 
-.produtos-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.produtos-produto p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.produtos-produto button {
+    width: 100%;
+    border: none;
+    color: #FFF;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: var(--azulBotao);
+    transition: background-color 0.3s;
+}
+
+.produtos-produto button:hover {
+    background-color: var(--azulBase);
+}
+
+.loja-container{
+    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .produto {
-    background-color: #3a3a3a;
     padding: 20px;
-    border-radius: 10px;
-    width: 250px;
     text-align: center;
-    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: var(--escuro2);
+}
+
+a > .produto{
+    width: 100%;
+    height: 100%;
+}
+
+a:hover> .produto{
+    background-color: var(--azulBotao);
+    transition: .5s;
 }
 
 .produto img {
@@ -133,32 +168,32 @@ nav .nav-links a:hover {
 }
 
 .produto h3 {
-    margin-top: 10px;
     font-size: 18px;
+    margin-top: 10px;
 }
 
 .produto p {
-    font-size: 16px;
     margin: 10px 0;
+    font-size: 16px;
 }
 
 .produto button {
-    background-color: #0a74da;
-    border: none;
-    color: white;
-    padding: 10px;
     width: 100%;
+    border: none;
+    padding: 10px;
+    color: white;
     cursor: pointer;
     border-radius: 5px;
+    background-color: var(--azulBotao);
     transition: background-color 0.3s;
 }
 
 .produto button:hover {
-    background-color: #005bb5;
+    background-color: var(--azulBase);
 }
 
 footer {
-    background-color: #1b1b1b;
+    background-color: var(--escuro0);
     color: #fff;
     text-align: center;
     padding: 20px 0;
