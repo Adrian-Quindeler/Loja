@@ -1,3 +1,22 @@
-img{
-    padding :5px 10px;
+img.nav{
+    margin: 0 10px 0 0;
+}
+
+img.item{
+    border-radius: 5px;
+    box-shadow: 0 0 10px #000;
+}
+
+p{
+    text-align: justify;
+}
+
+p.bold{
+    font-weight: 600;
+}
+
+.destaque{
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
