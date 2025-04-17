@@ -6,3 +6,6 @@ def home(request):
 
 def games(request):
     return render(request, 'html/games/games.html')
+
+def popular(request):
+    return render(request, 'html/games/popular.html')

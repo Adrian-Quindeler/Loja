@@ -44,14 +44,36 @@
     <header id="inicio" class="bg-dark py-5">
         <div class="container px-4 px-lg-5">
             <div class="text-center text-white">
-                <h1 class="display-4 fw-bolder">Explore o Universo dos Games</h1>
-                <p class="lead text-center fw-normal text-white-50 mb-0">Encontre seu próximo jogo favorito na nossa gama de jogos incríveis com promoções imperdiveis!</p>
+                <h1 class="display-4 fw-bolder">Encontre os produtos mais populares</h1>
+                <p class="lead text-center fw-normal text-white-50 mb-0">Jogos 5 estrelas, com preços imperdiveis! Explore os itens mais vendidos do momento.</p>
             </div>
         </div>
     </header>
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="{% static 'img/HollowKnight.png'%}" alt="Hollow Knight" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Hollow <br> Knight</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <span class="text-muted text-decoration-line-through">$14.99</span>
+                                $9.99
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">+ Carrinho</a></div>
+                        </div>
+                    </div>
+                </div>
                 <div class="col mb-5">
                     <div class="card h-100">
                         <img class="card-img-top" src="{% static 'img/RedDeadR2.png'%}" alt="Red Dead Redemption 2" />
@@ -66,6 +88,71 @@
                                     <div class="bi-star-fill"></div>
                                 </div>
                                 $49.99
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">+ Carrinho</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="{% static 'img/EldenRing.png'%}" alt="Elden Ring" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Elden <br> Ring</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                </div>
+                                <span class="text-muted text-decoration-line-through">$79.99</span>
+                                $59.99
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="{% static 'img/Zelda.png' %}" alt="The Legend of Zelda" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Breath of <br> the Wild</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-half"></div>
+                                </div>
+                                $49.99 - $59.99
+                            </div>
+                        </div>
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="Assassin's Creed Valhalla" />
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <h5 class="fw-bolder">Assassin's Creed Valhalla</h5>
+                                <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-fill"></div>
+                                    <div class="bi-star-half"></div>
+                                </div>
+                                <span class="text-muted text-decoration-line-through">$59.99</span>
+                                $29.99
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -96,28 +183,6 @@
                 </div>
                 <div class="col mb-5">
                     <div class="card h-100">
-                        <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="Assassin's Creed Valhalla" />
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">Assassin's Creed Valhalla</h5>
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-half"></div>
-                                </div>
-                                <span class="text-muted text-decoration-line-through">$59.99</span>
-                                $29.99
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">+ Carrinho</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
                         <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="Far Cry 6" />
                         <div class="card-body p-4">
                             <div class="text-center">
@@ -135,27 +200,6 @@
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">+ Carrinho</a></div>
-                        </div>
-                    </div>
-                </div><div class="col mb-5">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="{% static 'img/EldenRing.png'%}" alt="Elden Ring" />
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">Elden <br> Ring</h5>
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <span class="text-muted text-decoration-line-through">$79.99</span>
-                                $59.99
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
                         </div>
                     </div>
                 </div>
@@ -194,28 +238,6 @@
                                     <div class="bi-star"></div>
                                 </div>
                                 $29.99
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">+ Carrinho</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="{% static 'img/HollowKnight.png'%}" alt="Hollow Knight" />
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">Hollow <br> Knight</h5>
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                </div>
-                                <span class="text-muted text-decoration-line-through">$14.99</span>
-                                $9.99
                             </div>
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
@@ -307,27 +329,6 @@
                         </div>
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                             <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">+ Carrinho</a></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-5">
-                    <div class="card h-100">
-                        <img class="card-img-top" src="{% static 'img/Zelda.png' %}" alt="The Legend of Zelda" />
-                        <div class="card-body p-4">
-                            <div class="text-center">
-                                <h5 class="fw-bolder">Breath of <br> the Wild</h5>
-                                <div class="d-flex justify-content-center small text-warning mb-2">
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-fill"></div>
-                                    <div class="bi-star-half"></div>
-                                </div>
-                                $49.99 - $59.99
-                            </div>
-                        </div>
-                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
                         </div>
                     </div>
                 </div>
