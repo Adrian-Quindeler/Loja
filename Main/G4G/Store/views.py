@@ -1,11 +1,22 @@
 from django.shortcuts import render
 
-# Create your views here.
+# Home.
 def home(request):
     return render(request, "html/home.html")
 
-def games(request):
-    return render(request, 'html/games/games.html')
 
-def popular(request):
+#Games
+def games_all(request):
+    return render(request, 'html/games/all.html')
+
+def games_popular(request):
     return render(request, 'html/games/popular.html')
+
+
+#Console
+def console_all(request):
+    return render(request, 'html/console/all.html')
+
+#Console
+def console_popular(request):
+    return render(request, 'html/console/popular.html')

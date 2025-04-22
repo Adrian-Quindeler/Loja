@@ -3,13 +3,22 @@ from Store import views
 
 urlpatterns = [
 
-    #Pagina Inicial
+    #Home Page
     path("", views.home, name="home"),
 
-    #Pagina de Jogos
-    ## Games
-    path('games.html', views.games, name="games"),
+
+    #Game Page
+    ## All
+    path('games/all.html', views.games_all, name="games"),
 
     #Popular
-    path('popular.html', views.popular, name="popular"),
+    path('games/popular.html', views.games_popular, name="popular"),
+
+
+    #Console Page
+    ## All
+    path('console/all.html', views.console_all, name="console"),
+
+    #Popular
+    path('console/popular.html', views.console_popular, name="popular"),
 ]
