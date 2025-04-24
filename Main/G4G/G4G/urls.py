@@ -6,6 +6,9 @@ urlpatterns = [
     #Home Page
     path("", views.home, name="home"),
 
+    #Payment
+    path("payment.html", views.payment, name="payment"),
+
 
     #Game Page
     ## All

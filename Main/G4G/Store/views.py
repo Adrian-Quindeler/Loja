@@ -4,6 +4,8 @@ from django.shortcuts import render
 def home(request):
     return render(request, "html/home.html")
 
+def payment(request):
+    return render(request, "html/payment.html")
 
 #Games
 def games_all(request):

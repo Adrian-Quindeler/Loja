@@ -16,7 +16,28 @@ p.bold{
 }
 
 .destaque{
-    font-weight: bold;
     text-align: center;
+    font-weight:  bold;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul.products {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style-type: none;
+}
+
+ul.products img {
+    margin: 0 10px 10px 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+div.itens{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: justify;
 }
