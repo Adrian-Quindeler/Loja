@@ -14,6 +14,9 @@ urlpatterns = [
     ## All
     path('games/all.html', views.games_all, name="games"),
 
+    #New
+    path('games/new.html', views.games_new, name="new"),
+
     #Popular
     path('games/popular.html', views.games_popular, name="popular"),
 
@@ -21,6 +24,9 @@ urlpatterns = [
     #Console Page
     ## All
     path('console/all.html', views.console_all, name="console"),
+
+    # New
+    path('console/new.html', views.console_new, name="new"),
 
     #Popular
     path('console/popular.html', views.console_popular, name="popular"),

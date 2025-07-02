@@ -41,3 +41,9 @@ div.itens{
     flex-direction: row;
     justify-content: justify;
 }
+
+
+img.payment_method{
+    width: 50px;
+    margin: 20px 10px;
+}
