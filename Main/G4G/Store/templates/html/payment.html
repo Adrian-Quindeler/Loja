@@ -18,7 +18,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container px-5">
             <a href="../#inicio">
-                <img src="{% static 'img/G4G_Small.png' %}" class="nav" alt="Galaxy For Geeks Logo">
+                <img src="{% static 'img/G4G_Small.WebP' %}" class="nav" alt="Galaxy For Geeks Logo">
                 <a class="navbar-brand" href="../#inicio">Galaxy For Geeks</a>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -83,9 +83,9 @@
                     {% csrf_token %}
                     <p class="lead">Selecione a forma de pagamento:</p>
                 
-                    <label><input type="radio" name="payment_method" value="pix" required> <img class="payment_method" src="{% static 'img/pix.png' %}" alt=""> Pix</label><br>
-                    <label><input type="radio" name="payment_method" value="boleto"> <img class="payment_method" src="{% static 'img/boleto.png' %}" alt=""> Boleto</label><br>
-                    <label><input type="radio" name="payment_method" value="cartao"> <img class="payment_method" src="{% static 'img/cartao.png' %}" alt=""> Cartão de Crédito</label><br>
+                    <label><input type="radio" name="payment_method" value="pix" required> <img class="payment_method" src="{% static 'img/pix.WebP' %}" alt=""> Pix</label><br>
+                    <label><input type="radio" name="payment_method" value="boleto"> <img class="payment_method" src="{% static 'img/boleto.WebP' %}" alt=""> Boleto</label><br>
+                    <label><input type="radio" name="payment_method" value="cartao"> <img class="payment_method" src="{% static 'img/cartao.WebP' %}" alt=""> Cartão de Crédito</label><br>
                 
                     <button type="submit" class="btn btn-outline-dark mt-3">Confirmar compra</button>
                 </form>

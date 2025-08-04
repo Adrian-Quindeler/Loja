@@ -1,21 +1,26 @@
 from django.shortcuts import render
+from .models import Game
 
-# Home.
+# Home
 def home(request):
     return render(request, "html/home.html")
 
 def payment(request):
     return render(request, "html/payment.html")
 
+
 #Games
 def games_all(request):
-    return render(request, 'html/games/all.html')
+    games = Game.objects.all()
+    return render(request, 'html/games/all.html', {'games': games})
 
 def games_new(request):
-    return render(request, 'html/games/new.html')
+    games = Game.objects.all()
+    return render(request, 'html/games/new.html', {'games': games})
 
 def games_popular(request):
-    return render(request, 'html/games/popular.html')
+    games = Game.objects.all()
+    return render(request, 'html/games/popular.html', {'games': games})
 
 
 
