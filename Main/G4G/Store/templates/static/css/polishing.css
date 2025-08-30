@@ -1,3 +1,18 @@
+nav ul{
+    gap: 10px;
+}
+nav .ativo {
+    font-weight: 800;
+    background: #007bff;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+}
+
+nav .ativo > a {
+    color: #fff;
+}
+
 img.nav{
     margin: 0 10px 0 0;
 }

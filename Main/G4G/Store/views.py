@@ -31,6 +31,16 @@ def console_all(request):
 def console_new(request):
     return render(request, 'html/console/new.html')
 
-#Console
 def console_popular(request):
     return render(request, 'html/console/popular.html')
+
+
+#components
+def components_all(request):
+    return render(request, 'html/components/all.html')
+
+def components_new(request):
+    return render(request, 'html/components/new.html')
+
+def components_popular(request):
+    return render(request, 'html/components/popular.html')

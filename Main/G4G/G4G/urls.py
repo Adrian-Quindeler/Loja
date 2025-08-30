@@ -30,4 +30,15 @@ urlpatterns = [
 
     #Popular
     path('console/popular.html', views.console_popular, name="popular"),
+
+
+    #Components Page
+    ## All
+    path('components/all.html', views.components_all, name="components"),
+
+    # New
+    path('components/new.html', views.components_new, name="new"),
+
+    #Popular
+    path('components/popular.html', views.components_popular, name="popular"),
 ]
